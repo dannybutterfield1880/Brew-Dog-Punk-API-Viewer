@@ -42,6 +42,57 @@ function App({ loadBeers, beers }) {
         </nav>
       </header>
       <hr/>
+      <section class="punk-api">
+        <h1 className="f-subheadline lh-solid ttu tc code relative mb5-ns mb4">
+          <div className="bottle absolute-ns">
+            <div className="bottle-face">
+              <svg viewBox="0 0 220 860" xmlns="http://www.w3.org/2000/svg" className="logo">
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                      d="M20 340h180v100H20V340zm20-160h140v160H40V180zM60 20h100v160H60V20zm140 360h20v460h-20V380zM0 380h20v460H0V380zm20 400h180v80H20v-80z"
+                      fill="#333"></path>
+                  <path fill="#00AFDB" d="M20 440h180v340H20zM60 0h100v20H60z" className="logo__label"></path>
+                </g>
+              </svg>
+            </div>
+
+            <div className="bottle-face">
+              <svg viewBox="0 0 220 860" xmlns="http://www.w3.org/2000/svg" className="logo">
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                      d="M20 340h180v100H20V340zm20-160h140v160H40V180zM60 20h100v160H60V20zm140 360h20v460h-20V380zM0 380h20v460H0V380zm20 400h180v80H20v-80z"
+                      fill="#333"></path>
+                  <path fill="#00AFDB" d="M20 440h180v340H20zM60 0h100v20H60z" className="logo__label"></path>
+                </g>
+              </svg>
+            </div>
+
+            <div className="bottle-face">
+              <svg viewBox="0 0 220 860" xmlns="http://www.w3.org/2000/svg" className="logo">
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                      d="M20 340h180v100H20V340zm20-160h140v160H40V180zM60 20h100v160H60V20zm140 360h20v460h-20V380zM0 380h20v460H0V380zm20 400h180v80H20v-80z"
+                      fill="#333"></path>
+                  <path fill="#00AFDB" d="M20 440h180v340H20zM60 0h100v20H60z" className="logo__label"></path>
+                </g>
+              </svg>
+            </div>
+
+            <div className="bottle-face">
+              <svg viewBox="0 0 220 860" xmlns="http://www.w3.org/2000/svg" className="logo">
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                      d="M20 340h180v100H20V340zm20-160h140v160H40V180zM60 20h100v160H60V20zm140 360h20v460h-20V380zM0 380h20v460H0V380zm20 400h180v80H20v-80z"
+                      fill="#333"></path>
+                  <path fill="#00AFDB" d="M20 440h180v340H20zM60 0h100v20H60z" className="logo__label"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <a href="/" className="black no-underline"> Punk API </a>
+        </h1>
+      </section>
+
       <section id="search-section">
         <div className="search-bar">
           <label>
@@ -86,7 +137,7 @@ function App({ loadBeers, beers }) {
         <section className="drawer-section">
           <ul>
             <li className="drawer-title">
-              <h2>Site Navigation</h2>
+
             </li>
             <li className="site-navigation">Home</li>
             <li className="site-navigation">About</li>
