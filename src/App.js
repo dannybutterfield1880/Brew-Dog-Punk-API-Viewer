@@ -110,13 +110,13 @@ function App({ beers, beersTotal, currentPage, loadBeers, nextPage, prevPage }) 
       <hr/>
       <div className="seperator" />
       <section className="pagination">
-        {
-          currentPage > 1 && <button onClick={prevPage}>Prev</button>
-        }
-        page { currentPage }
-        {
-          currentPage < Math.ceil(beersTotal / 20) && <button onClick={nextPage}>Next</button>
-        }
+        <button onClick={prevPage} disabled={(currentPage <= 1)}>
+          <i className="fa fa-chevron-left" />
+        </button>
+        <span>page { currentPage }</span>
+        <button onClick={nextPage} disabled={!(currentPage < Math.ceil(beersTotal / 20))}>
+          <i className="fa fa-chevron-right" />
+        </button>
         <br/>
         <small>showing { ( currentPage - 1 ) * 20 } - { currentPage * 20 }</small>
       </section>
@@ -144,9 +144,6 @@ function App({ beers, beersTotal, currentPage, loadBeers, nextPage, prevPage }) 
       <aside id="drawer" className={drawerOpen ? 'open' : null}>
         <section className="drawer-section">
           <ul>
-            <li className="drawer-title">
-
-            </li>
             <li className="site-navigation">Home</li>
             <li className="site-navigation">About</li>
             <li className="site-navigation">Contact</li>

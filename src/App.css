@@ -110,8 +110,9 @@ hr {
 .search-bar input {
   flex: 1;
   border: 0;
-  padding: 1em;
+  padding: 1em 1em 1em 1.5em;
   background: none;
+  outline: 0;
 }
 
 .search-bar button {
@@ -121,6 +122,26 @@ hr {
   color: white;
   font-weight: 700;
   border-radius: 0 10px 10px 0;
+  outline: 0;
+}
+
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-template-areas: "prev page next";
+  padding: 1em;
+}
+
+.pagination button {
+  background: none;
+  border: none;
+  outline: 0;
+}
+
+.pagination button, .pagination span {
+  padding: 1em;
 }
 
 #beer-results ul {
