@@ -14,7 +14,7 @@ hr {
 
 .App {
   text-align: center;
-  margin-top: 7em;
+  margin-top: 6em;
 }
 
 .App-header {
@@ -37,7 +37,7 @@ hr {
 }
 
 .App-logo img {
-  width: 80px;
+  width: 50px;
   height: auto;
   float: left;
   padding: 1em;
@@ -82,7 +82,7 @@ hr {
 }
 
 .burger-bar i {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 600;
 }
 
@@ -175,7 +175,7 @@ hr {
 
 #drawer {
   position: fixed;
-  top: 112px;
+  top: 96px;
   left: 0;
   right: 0;
   bottom: 0;
