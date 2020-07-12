@@ -1,38 +1,300 @@
+body {
+  //display: inline-block;
+}
+
+hr {
+  border: 0;
+  padding: 0.3em 0;
+}
+
+.seperator {
+  border-bottom: 1px solid #2081af;
+  margin: 0px 1em;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin-top: 7em;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-height: 10vh;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: #2081af;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-template-areas: "site-logo main-navigation";
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.App-logo {
+  pointer-events: none;
+  grid-area: site-logo;
+}
+
+.App-logo img {
+  width: 80px;
+  height: auto;
+  float: left;
+  padding: 1em;
+}
+
+.App-navigation ul {
+  list-style: none;
+  display: none;
+  justify-content: space-between;
+  margin-right: 1em;
+}
+
+.App-navigation ul li {
+  position: relative;
+}
+
+.App-navigation ul li a {
   color: white;
+  text-decoration: none;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.App-navigation ul li a:hover::after {
+  content: '______';
+  font-size: 2.2em;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.main-navigation {
+  display: none;
+}
+
+.burger-bar {
+  text-align: right;
+  padding: 2em;
+  color: white;
+}
+
+.burger-bar i {
+  font-size: 3em;
+  font-weight: 600;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#search-section {
+  margin: 0 1em;
+}
+
+.search-bar {
+  background: #efefef;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.search-bar label {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: 0;
+  padding: 1em;
+  background: none;
+}
+
+.search-bar button {
+  background: limegreen;
+  border: 0;
+  padding: 1.5em;
+  color: white;
+  font-weight: 700;
+  border-radius: 0 10px 10px 0;
+}
+
+#beer-results ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#beer-results ul li {
+  flex: 0 0 50%;
+}
+
+#beer-results img {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  padding: 0.5em;
+  margin-bottom: 20px;
+}
+
+.beer-button {
+  border-radius: 20px;
+  margin: 0.8em;
+  text-align: center;
+  padding: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.beer-button:hover {
+  background: #efefef;
+  cursor: pointer;
+}
+
+.beer-name {
+  height: 66px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
+}
+
+.beer-button h4 {
+  padding: 0.5em 0;
+  margin: 1em;
+}
+
+#drawer {
+  position: fixed;
+  top: 112px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: #efefef;
+  margin-left: -531px;
+  flex-direction: column;
+  display: none;
+}
+
+.drawer-section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer-title {
+  border-bottom: 1px solid grey;
+}
+
+.site-navigation {
+  line-height: 5em;
+  border-bottom: 1px solid grey;
+}
+
+.site-navigation:hover,
+.site-navigation:active {
+  background: lightgray;
+}
+
+#drawer.open {
+  margin-left: 0;
+  display: block;
+}
+
+.open .drawer-footer {
+  display: grid;
+}
+
+.drawer-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 16px;
+  grid-template-areas:
+          "caption site-logo"
+          "donation-text donation-text"
+          "donation donation";
+}
+
+.drawer-footer .drawer-caption {
+  grid-area: caption;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.drawer-footer section {
+  padding: 0 1em;
+}
+
+.drawer-footer small {
+  color: white;
+}
+
+.drawer-footer section ul {
+  list-style: none;
+  display: flex;
+}
+
+.drawer-footer section ul li {
+  color: white;
+  float: left;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.drawer-donation-text {
+  grid-area: donation-text;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 2em 2em;
+}
+
+.donations-container {
+  grid-area: donation;
+}
+
+.drawer-footer section ul li svg {
+  margin-right: 1em;
+}
+
+.drawer-footer-image-container {
+  text-align: right;
+}
+
+.drawer-footer img {
+  height: 60px;
+  padding: 2em;
+  grid-area: site-logo;
+}
+
+@media (min-width: 600px) {
+  .App-navigation ul {
+    display: flex;
   }
-  to {
-    transform: rotate(360deg);
+  .burger-bar {
+    display: none;
+  }
+  #beer-results ul li {
+    flex: 0 0 25%;
   }
 }
