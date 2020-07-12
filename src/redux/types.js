@@ -1,5 +1,9 @@
 export const LOAD_BEERS = 'LOAD_BEERS';
 export const BEERS_LOADING = 'BEERS_LOADING';
+export const TOTAL_BEERS_COUNTED = 'TOTAL_BEERS_COUNTED';
 export const BEERS_LOADED = 'BEERS_LOADED';
 export const SEARCH_BEERS = 'SEARCH_BEERS';
 export const SEARCHING_BEERS = 'SEARCHING_BEERS';
+
+export const NEXT_PAGE = 'NEXT_PAGE';
+export const PREV_PAGE = 'PREV_PAGE';

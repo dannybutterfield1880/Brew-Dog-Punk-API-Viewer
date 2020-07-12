@@ -1,7 +1,8 @@
-import {BEERS_LOADED, BEERS_LOADING} from "../types";
+import {BEERS_LOADED, BEERS_LOADING, NEXT_PAGE, PREV_PAGE} from "../types";
 
 const initialState = {
-    loading: false
+    loading: false,
+    currentPage: 1
 }
 
 export default function(state = initialState, action) {
@@ -15,6 +16,16 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 loading: false
+            }
+        case NEXT_PAGE:
+            return {
+                ...state,
+                currentPage: state.currentPage + 1
+            }
+        case PREV_PAGE:
+            return {
+                ...state,
+                currentPage: state.currentPage - 1
             }
         default:
             return state;
